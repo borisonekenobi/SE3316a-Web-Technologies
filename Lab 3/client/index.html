@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <script src="database_functions.js"></script>
+    <script defer src="lab3.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ol@latest/dist/ol.js"></script>
+    <title>SE 3316 - Lab 3</title>
+    <link href="stylesheet.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.15.1/css/ol.css"
+          rel="stylesheet" type="text/css">
+</head>
+<body>
+<button disabled id="show-all" onclick="showAllDestinations()">Show All Destinations</button>
+<label for="search">Search: </label>
+<input type="text" name="search" id="search">
+<button id="search-button" onclick="search()">Search</button>
+<label for="limit">Limit Results: </label>
+<select name="limit" id="limit" onchange="resetResults()">
+    <option value="undefined">All</option>
+    <option value="5">5</option>
+    <option value="10">10</option>
+    <option value="20">20</option>
+    <option value="50">50</option>
+</select>
+<label for="file">Upload CSV File: </label>
+<input type="file" id="file" accept=".csv" onchange="readFile(this)">
+<div class="grid-2">
+    <div id="map"></div>
+    <div id="info"></div>
+    <div>
+        <button id="prev" onclick="prevResults()" disabled><</button>
+        <button id="next" onclick="nextResults()" disabled>></button>
+        <label for="sort">Sort By: </label>
+        <select name="sort" id="sort" onchange="search()">
+            <option value="tourists_asc">Annual Tourists (Ascending)</option>
+            <option value="tourists_desc" selected>Annual Tourists (Descending)</option>
+            <option value="name_asc">Name (A to Z)</option>
+            <option value="name_desc">Name (Z to A)</option>
+            <option value="region_asc">Region (A to Z)</option>
+            <option value="region_desc">Region (Z to A)</option>
+            <option value="country_asc">Country (A to Z)</option>
+            <option value="country_desc">Country (Z to A)</option>
+        </select>
+        <p id="results"></p>
+        <ul id="destinations"></ul>
+    </div>
+    <ul id="lists"></ul>
+</div>
+</body>
+</html>

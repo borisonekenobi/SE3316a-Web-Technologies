@@ -1,0 +1,253 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+nav {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 10px;
+    padding: 0 10px;
+    border-radius: 25px;
+    border: 2px solid #ccc;
+}
+
+#searchBox {
+    background-color: transparent;
+    flex-grow: 2;
+    border: none;
+}
+
+#searchBox:focus {
+    outline: none;
+}
+
+.button {
+    background-color: transparent;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    border: 0;
+    outline: 0;
+    text-align: left;
+    display: inline-flex;
+    justify-content: space-between;
+    color: #a0a0a0;
+    cursor: pointer;
+}
+
+i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa {
+    font-size: 20px;
+}
+
+.filters {
+    background: #efefef;
+    width: 250px;
+    box-shadow: 0 0 0.5em 0 rgba(0, 0, 0, 0.3);
+    padding: 1.5em;
+    position: absolute;
+}
+
+.filters-list li {
+    display: flex;
+    align-items: center;
+    user-select: none;
+    padding-bottom: 1em;
+    line-height: 0;
+}
+
+.filters-list li:last-child {
+    padding-bottom: 0;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.filters:not(.filters-active) {
+    display: none;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.card-list {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.card {
+    background-color: #f7f5e7;
+    flex: 0 0 auto;
+    width: 90%;
+    max-width: 600px;
+    margin-right: 20px;
+    scroll-snap-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(2.5%) scale(1.05);
+}
+
+.card:first-child {
+    margin-left: 50%;
+}
+
+.card:last-child {
+    margin-right: 50%;
+}
+
+.card-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    height: 200px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-title {
+    color: #000;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.card-other-title {
+    color: #000;
+    display: list-item;
+    list-style: disc;
+    margin: 0 0 0 15px;
+}
+
+.card-other-title:first-of-type {
+    font-weight: bold;
+}
+
+.location-chip {
+    display: inline-block;
+    padding: 0 25px;
+    height: 25px;
+    font-size: 8px;
+    line-height: 25px;
+    border-radius: 25px;
+}
+
+.location-chip.prince-edward-island {
+    background-color: #800000;
+    color: #fff;
+}
+
+.location-chip.nova-scotia {
+    background-color: #DB214C;
+    color: #fff;
+}
+
+.location-chip.newfoundland {
+    background-color: #F7C5B4;
+}
+
+.location-chip.quebec {
+    background-color: #F4B97F;
+}
+
+.location-chip.ontario {
+    background-color: #F8C300;
+}
+
+.location-chip.manitoba {
+    background-color: #B8DA6B;
+}
+
+.location-chip.saskatchewan {
+    background-color: #9CCE59;
+}
+
+.location-chip.alberta {
+    background-color: #98AF85;
+}
+
+.location-chip.british-columbia {
+    background-color: #449284;
+}
+
+.location-chip.new-brunswick {
+    background-color: #EB8990;
+}
+
+.location-chip.nunavut {
+    background-color: #75C5F0;
+}
+
+.location-chip.northwest-territories {
+    background-color: #96AEBE;
+}
+
+.location-chip.yukon {
+    background-color: #798992;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.container {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+li.hidden {
+    display: none;
+}
+
+ul {
+    list-style: none;
+}
+
+label {
+    cursor: pointer;
+}
+
+ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    padding: 0.5em;
+}

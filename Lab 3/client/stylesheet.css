@@ -1,0 +1,27 @@
+div.grid-2 {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+}
+
+div#map {
+    width: 500px;
+    height: 500px;
+}
+
+p {
+    margin: 5px 0;
+}
+
+label {
+    margin-left: 10px;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}

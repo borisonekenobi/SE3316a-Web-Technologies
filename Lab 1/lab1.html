@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>SE 3316 Lab 1</title>
+    <meta content="" name="description">
+    <meta content="" name="author">
+
+    <!-- the below link is used for the icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="lab1.css" rel="stylesheet">
+    <script src="lab1.js" type="text/javascript"></script>
+</head>
+
+<body>
+<nav>
+    <label for="searchBox"></label>
+    <input id="searchBox" maxlength="20" onkeydown="keyClicked(event)" placeholder="Search by botanical name"
+           type="text">
+    <button class="button" id="search-button" onclick="searchClicked()">
+        <i class="fa">&#xf002;</i>
+    </button>
+    <button class="button" id="filter-button" onclick="filterBtnClick(event)">
+        <i class="fa">&#xf0b0;</i>
+    </button>
+    <div class="filters" id="filter-container" onclick="containerClick(event)">
+        <ul class="filters-list">
+            <li>
+                <input id="alberta" oninput="selectFilter(this)" type="checkbox"/>
+                <label for="alberta">Alberta</label>
+            </li>
+            <li>
+                <input id="british-columbia" oninput="selectFilter(this)" type="checkbox"/>
+                <label for="british-columbia">British Columbia</label>
+            </li>
+            <li>
+                <input id="manitoba" oninput="selectFilter(this)" type="checkbox"/>
+                <label for="manitoba">Manitoba</label>
+            </li>
+            <li>
+                <input id="new-brunswick" oninput="selectFilter(this)" type="checkbox"/>
+                <label for="new-brunswick">New Brunswick</label>
+            </li>
+            <li>
+                <input id="newfoundland" oninput="selectFilter(this)" type="checkbox"/>
+                <label for="newfoundland">Newfoundland</label>
+            </li>
+            <li>
+                <input id="northwest-territories" oninput="selectFilter(this)" type="checkbox"/>
+                <label for="northwest-territories">Northwest Territories</label>
+            </li>
+            <li>
+                <input id="nova-scotia" oninput="selectFilter(this)" type="checkbox"/>
+                <label for="nova-scotia">Nova Scotia</label>
+            </li>
+            <li>
+                <input id="nunavut" oninput="selectFilter(this)" type="checkbox"/>
+                <label for="nunavut">Nunavut</label>
+            </li>
+            <li>
+                <input id="ontario" oninput="selectFilter(this)" type="checkbox"/>
+                <label for="ontario">Ontario</label>
+            </li>
+            <li>
+                <input id="prince-edward-island" oninput="selectFilter(this)" type="checkbox"/>
+                <label for="prince-edward-island">Prince Edward Island</label>
+            </li>
+            <li>
+                <input id="quebec" oninput="selectFilter(this)" type="checkbox"/>
+                <label for="quebec">Quebec</label>
+            </li>
+            <li>
+                <input id="saskatchewan" oninput="selectFilter(this)" type="checkbox"/>
+                <label for="saskatchewan">Saskatchewan</label>
+            </li>
+            <li>
+                <input id="yukon" oninput="selectFilter(this)" type="checkbox"/>
+                <label for="yukon">Yukon</label>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container" id="container">
+    <ul class="card-list" id="test">
+        <li class="card newfoundland new-brunswick quebec ontario manitoba saskatchewan alberta british-columbia yukon northwest-territories"
+            id="Amerorchis rotundifolia">
+            <div class="card-img">
+                <img alt="Amerorchis rotundifolia" src="./resources/Amerorchis rotundifolia.jpg">
+            </div>
+            <div class="card-title">Amerorchis rotundifolia</div>
+            <h4>Locations</h4>
+            <ul>
+                <li class="location-chip newfoundland">Newfoundland</li>
+                <li class="location-chip new-brunswick">New Brunswick</li>
+                <li class="location-chip quebec">Quebec</li>
+                <li class="location-chip ontario">Ontario</li>
+                <li class="location-chip manitoba">Manitoba</li>
+                <li class="location-chip saskatchewan">Saskatchewan</li>
+                <li class="location-chip alberta">Alberta</li>
+                <li class="location-chip british-columbia">British Columbia</li>
+                <li class="location-chip yukon">Yukon</li>
+                <li class="location-chip northwest-territories">Northwest Territories</li>
+            </ul>
+            <p></p>
+            <h4>Other names:</h4>
+            <ul>
+                <li class="card-other-title">(Banks ex Pursh) Hulten</li>
+                <li class="card-other-title">[Orchis rotundifolia] Banks</li>
+                <li class="card-other-title">[Habenaria rotundifolia] (Banks) Richardson</li>
+                <li class="card-other-title">Small Round Leaved Orchis</li>
+            </ul>
+            <h4>Specific Habitat</h4>
+            <p>
+                In Ottawa District, fairly open treed fens, open sedge fens and some swamps associated with
+                these fens. Within treed habitats, the orchid plants group in well-defined areas where the
+                canopy is thin and shrub layer is absent. In sedge fens the plants are scattered across the
+                open fen, on the wet peat of the fen floor or on mounds of fen mosses.
+                In Bruce Peninsula, prefers cold northern forests and shaded bogs and swamps.
+            </p>
+            <h4>Flowering Season</h4>
+            <p>Flowering Season: June to early July.</p>
+            <h4>Description</h4>
+            <p>
+                Height to 15 cm.
+                Leaf solitary, clasping stem near base, dull yellow-green, ovate-elliptic.
+                Raceme loose, irregular, somewhat one-sided, with 1-8 flowers, bracts lanceolate.
+                Flowers white to pale pink blotted and spotted with deep purple. Petals form hood with
+                dorsal sepal. Lip deeply 3-lobed, middle lobe spatulate to cuneate, lateral lobes smaller,
+                elliptic.
+                Column short, beneath the hood. Spur slender, curved.
+            </p>
+            <h4>Comments</h4>
+            <p>
+                Common in the northwest of the continent, widespread but local in the east. Only two
+                locations in the Bruce Peninsula, rare and apparently approaching extinction in the Ottawa
+                District, loose groups of flowering and non-flowering groups in Eastern Ontario.
+                Highly variable pattern of lip colouration in the species.
+            </p>
+            <h4>References</h4>
+            <p>
+                Guide to Orchids of North America<br>
+                Orchids of Ontario<br>
+                The Orchids of Bruce &amp; Grey<br>
+            </p>
+            <a href="https://en.wikipedia.org/wiki/Galearis_rotundifolia">Wikipedia</a>
+        </li>
+        <li class="card quebec ontario" id="Aplectrum hyemale">
+            <div class="card-img">
+                <img alt="Aplectrum hyemale" src="./resources/Aplectrum hyemale.jpg">
+            </div>
+            <div class="card-title">Aplectrum hyemale</div>
+            <h4>Locations</h4>
+            <ul>
+                <li class="location-chip quebec">Quebec</li>
+                <li class="location-chip ontario">Ontario</li>
+            </ul>
+            <p></p>
+            <h4>Other names:</h4>
+            <ul>
+                <li class="card-other-title">(Muhlenberg ex Willdenow) Nuttall</li>
+                <li class="card-other-title">Putty Root</li>
+                <li class="card-other-title">Adam and Eve</li>
+            </ul>
+            <p></p>
+            <h4>Specific Habitat</h4>
+            <p>
+                Deciduous Forest Region. Rare in both provinces. At the northernmost edge of its
+                distribution
+                area in southern Ontario and Quebec. Prefers rich deciduous forests, especially beech and
+                sugar maple. Prefers deep pockets of humus on the edge of a hole created by uprooting of an
+                old tree,.. Often grows in flat, moist areas not far above the level of temporary ponds.
+            </p>
+            <h4>Flowering Season</h4>
+            <p>June.</p>
+            <h4>Description</h4>
+            <p>
+                Height to 20 cm.
+                One basal, elliptic leaf stalk, dark green with white veins. Leaf turns dark brown in the
+                spring.
+                Loose raceme of 5-10 flowers.
+                Flowers purplish tipped with brown, 3-lobed lip, central lobe wide, white, marked with
+                purple.
+            </p>
+            <h4>Comments</h4>
+            <p>
+                Easiest to spot in leaf in the autumn or early spring when the solitary green leaves are
+                more
+                conspicuous in contrast to the dead leaves on the forest floor. The green overwintering leaf
+                takes advantage of the higher light levels available before the trees leaf out to generate
+                food stores for energy for flowering and fruiting. Only produces a few flower spikes per
+                colony in any season, but produces a new corm each year.
+                Both English names refer to the corms. Their sticky consistency was used for mending broken
+                crockery by early settlers.
+            </p>
+            <h4>References</h4>
+            <p>
+                Orchids of Ontario<br>
+                The Canadian Field-Naturalist Vol III - 1<br>
+            </p>
+            <a href="https://en.wikipedia.org/wiki/Aplectrum">Wikipedia</a>
+        </li>
+        <li class="card newfoundland nova-scotia prince-edward-island new-brunswick quebec ontario manitoba saskatchewan"
+            id="Arethusa bulbosa">
+            <div class="card-img">
+                <img alt="Arethusa bulbosa" src="./resources/Arethusa bulbosa.jpg">
+            </div>
+            <div class="card-title">Arethusa bulbosa</div>
+            <h4>Locations</h4>
+            <ul>
+                <li class="location-chip newfoundland">Newfoundland</li>
+                <li class="location-chip nova-scotia">Nova Scotia</li>
+                <li class="location-chip prince-edward-island">Prince Edward Island</li>
+                <li class="location-chip new-brunswick">New Brunswick</li>
+                <li class="location-chip quebec">Quebec</li>
+                <li class="location-chip ontario">Ontario</li>
+                <li class="location-chip manitoba">Manitoba</li>
+                <li class="location-chip saskatchewan">Saskatchewan</li>
+            </ul>
+            <p></p>
+            <h4>Other names:</h4>
+            <ul>
+                <li class="card-other-title">Linnaeus</li>
+                <li class="card-other-title">Dragon's mouth, Moss Nymph, Wild Pink</li>
+            </ul>
+            <h4>Specific Habitat</h4>
+            <p>
+                Arethusa bulbosa is a native of cool sphagnous bogs, usually found at the edges rather than
+                the wettest parts of these bogs. It is frequently found along side rose pogonia and
+                grass-pink but not seen as frequently as it flowers earlier and is susceptible to late
+                frosts.
+            </p>
+            <h4>Flowering Season</h4>
+            <p>Flowers can appear in early June in the South through mid-July in the North.</p>
+            <h4>Description</h4>
+            <p>
+                Up to 35 cm. tall with a single grass-like leaf which continues to develop after the flower
+                has reached its peak. The solitary flower is magenta with yellow and white but can vary to
+                as light as white in colour. The petals are erect at the base but the apex is arched forward
+                over the lip. The lip is curved down, wavy on the margin mostly whitish with purple blotches
+                and with a brush of whitish hairs on the floor.
+                While Arethusa is sometimes compared to Calypso, these early bloomers do not share the same
+                habitat: Calypso prefers shaded cedar swamps, but Arethusa prefers sunny, open sphagnum
+                bogs.
+            </p>
+            <h4>Comments</h4>
+            <p>
+                Arethusa is named for a river nymph of classical Greek mythology. It is also interesting to
+                note that nearly all orchid writers seem to wax poetic when describing this beautiful
+                flower.
+            </p>
+            <h4>References</h4>
+            <p>
+                Orchids of Ontario<br>
+                Orchids of the Northeast<br>
+                The Orchids of Bruce &amp; Grey<br>
+            </p>
+            <a href="https://en.wikipedia.org/wiki/Dragon%27s_mouth">Wikipedia</a>
+        </li>
+        <li class="card newfoundland nova-scotia prince-edward-island new-brunswick quebec ontario manitoba"
+            id="Calopogon tuberosus">
+            <div class="card-img">
+                <img alt="Calopogon tuberosus" src="./resources/Calopogon tuberosus.jpg">
+            </div>
+            <div class="card-title">Calopogon tuberosus</div>
+            <h4>Locations</h4>
+            <ul>
+                <li class="location-chip newfoundland">Newfoundland</li>
+                <li class="location-chip nova-scotia">Nova Scotia</li>
+                <li class="location-chip prince-edward-island">Prince Edward Island</li>
+                <li class="location-chip new-brunswick">New Brunswick</li>
+                <li class="location-chip quebec">Quebec</li>
+                <li class="location-chip ontario">Ontario</li>
+                <li class="location-chip manitoba">Manitoba</li>
+            </ul>
+            <p></p>
+            <h4>Other names:</h4>
+            <ul>
+                <li class="card-other-title">(Linnaeus) Britton, Sterns, and Poggenburg</li>
+                <li class="card-other-title">Calopogon, Grass Pink</li>
+            </ul>
+            <h4>Specific Habitat</h4>
+            <p>
+                The Ottawa district is the northern part of the distribution of this orchid. It is a species
+                of Deciduous, Mixed and Southeastern Coastal Plain Forest Regions and adjacent edges of
+                Boreal Forest. It is normally in unshaded sites such as fens, soggy marl flats, or lush mats
+                of sphagnum moss.
+            </p>
+            <h4>Flowering Season</h4>
+            <p>Mid June to August.</p>
+            <h4>Description</h4>
+            <p>
+                Height: 10-35 cm.
+                Leaves basal, 1-2, linear and grass-like.
+                Raceme lax, flowers 3-8, rarely 12.
+                Flowers large, pink, rose-purple, or magenta-crimson, rarely white; opening successively.
+                Dorsal sepal narrowly oblong, acute; lateral sepals ovate, oblique; lateral petals with a
+                short claw, ovate-lanceolate or oblong elliptic, often tightly constricted. Lip uppermost
+                with 2 lateral lobes and a prominent triangular middle lobe. Central portion of lip is
+                densely bearded with short cream hairs with orange knobs. Fragrance rose-like or
+                lacking.
+            </p>
+            <h4>Comments</h4>
+            <p>
+                Unlike most other orchids, there is no twist in the ovary, so the lip is uppermost in the
+                flower. The lip is also unusually hinged at the base so that it bends forward when a bee
+                settles upon it; thus, the insect is thrown down on its back against the column and becomes
+                smeared with a sticky substance from the stigma. As the bee crawls out, the terminally
+                located pollinia become attached to its sticky dorsal surface. When the bee alights on
+                another Calopogon, the pollinia are transferred to the stigma of that flower.
+            </p>
+            <h4>References</h4>
+            <p>
+                Orchids of Ontario<br>
+                Orchids of the Northeast<br>
+                The Canadian Field-Naturalist Vol III-1<br>
+                The Orchids of Bruce &amp; Grey<br>
+            </p>
+            <a href="https://en.wikipedia.org/wiki/Calopogon_tuberosus">Wikipedia</a>
+        </li>
+        <li class="card newfoundland new-brunswick quebec ontario manitoba saskatchewan alberta british-columbia yukon northwest-territories -this-is-primarily-a-canadian-alaskan-orchid.-in-both-eurasia-and-north-america-this-orchid-is-rare-and-local."
+            id="Calypso bulbosa">
+            <div class="card-img">
+                <img alt="Calypso bulbosa" src="./resources/Calypso bulbosa.jpg">
+            </div>
+            <div class="card-title">Calypso bulbosa</div>
+            <h4>Locations</h4>
+            <ul>
+                <li class="location-chip newfoundland">Newfoundland</li>
+                <li class="location-chip new-brunswick">New Brunswick</li>
+                <li class="location-chip quebec">Quebec</li>
+                <li class="location-chip ontario">Ontario</li>
+                <li class="location-chip manitoba">Manitoba</li>
+                <li class="location-chip saskatchewan">Saskatchewan</li>
+                <li class="location-chip alberta">Alberta</li>
+                <li class="location-chip british-columbia">British Columbia</li>
+                <li class="location-chip yukon">Yukon</li>
+                <li class="location-chip northwest-territories">Northwest Territories</li>
+            </ul>
+            <p>
+                This is primarily a Canadian-Alaskan orchid. In both Eurasia and North America this orchid
+                is rare and local.
+            </p>
+            <h4>Other names:</h4>
+            <ul>
+                <li class="card-other-title">(Linnaeus) Oakes var. americana (R. Brown) Luer</li>
+                <li class="card-other-title">Calypso, Fairy Slipper</li>
+            </ul>
+            <h4>Specific Habitat</h4>
+            <p>
+                In the east, often located in inaccessible, damp forests. In the Ottawa District, the plants
+                grow in calcareous cedar swamps, in partially open places in moist needle-mould on mounds
+                around trees or on the swamp floor.
+                In the heat of summer all living traces of the plant disappear. In the fall, a single leaf
+                is produced, persisting under winter snows until spring blooming.
+                This orchid is most common in the west, occurring at moderately high elevations in the Rocky
+                Mountains, often in relatively dry pine forests, where it is far more successful in
+                reproducing itself
+            </p>
+            <h4>Flowering Season</h4>
+            <p>May-June-July.</p>
+            <h4>Description</h4>
+            <p>
+                Height to 20 cm depending on habitat.
+                Leaf: solitary, basal, dark to bluish-green, appears in autumn.
+                Flower showy, solitary, sepals and petals laterally spreading, pinkish-purple, rarely
+                whitish. Lip saccate, white, with yellowish 2-pronged apex, streaked with reddish-brown
+                inside. Apron formed from edges of lip, covers lower part of sac, white with pinkish-purple
+                edges and spots, crested with three rows of golden hairs.
+            </p>
+            <h4>Comments</h4>
+            <p>
+                Originally documented in an extensive wooded wetland which is now part of the drained and
+                cultivated Holland Marsh, this orchid now seems to be extinct in what was the southern
+                extreme of its range. Despite its extensive range, this orchid does not survive close
+                contact with man: this once well-established orchid has been reduced to a small number of
+                remote colonies. The white-flowered f. candida has been reported in Bruce County, Manitoulin
+                Island, and Thunder Bay area. Var. occidentalis (Holzinger) Calder &amp; Taylor is presently
+                debated as a species, subspecies, variety, or form. It is more similar to the typical
+                variety found in Eurasia than to ar. Americana.
+                Its habitat is the Pacific Northwest from California to British Columbia. The plant is
+                similar to the typical variety, but the lamina of the lip is mottled or irregularly blotched
+                with purple, and the tuft of bristles is reduced to a few thin whitish hairs. Isolated in
+                the Cascade Mountains and adjacent territory west of the Rocky Mountains in Canada, this
+                variety probably relies on different pollinators, as evidenced by the lack of yellow
+                bristles to attract bees.
+            </p>
+            <h4>References</h4>
+            <p>
+                Orchids of Ontario<br>
+                Orchids of the Northeast<br>
+                The Canadian Field-Naturalist Vol III-1<br>
+                The Native Orchids of the United States and Canada excluding Florida<br>
+                The Orchids of Bruce &amp; Grey<br>
+            </p>
+            <a href="https://en.wikipedia.org/wiki/Calypso_bulbosa">Wikipedia</a>
+        </li>
+        <li class="card british-columbia" id="Cephalanthera austinae">
+            <div class="card-img">
+                <img alt="Cephalanthera austinae" src="./resources/Cephalanthera austinae.jpg">
+            </div>
+            <div class="card-title">Cephalanthera austinae</div>
+            <h4>Locations</h4>
+            <ul>
+                <li class="location-chip british-columbia">British Columbia</li>
+            </ul>
+            <p></p>
+            <h4>Other names:</h4>
+            <ul>
+                <li class="card-other-title">(A. Gray) Heller [Eburophyton austinae]</li>
+                <li class="card-other-title">Phantom Orchid, Snow Orchid</li>
+            </ul>
+            <h4>Specific Habitat</h4>
+            <p>
+                Dimly lit virgin coniferous forests in the mountains of the Pacific Northwest, from British
+                Columbia to California. A relatively primitive genus, and the only truly saprophytic orchid,
+                requiring on a symbiotic relationship with a subterranean mycorrhizal fungus for nutrients.
+                Fourteen other species inhabit Europe, North Africa, and the northern parts of Asia.
+            </p>
+            <h4>Flowering Season</h4>
+            <p>June to August.</p>
+            <h4>Description</h4>
+            <p>
+                Roots thickened and fibrous, from a short rhizome.
+                Height to 65 cm. Stem white, glabrous, leafless, clothed in white sheaths up to 10 cm. long,
+                passing into bracts above.
+                Raceme loose, up to 20 white flowers.
+                Flower sepals and petals do not spread widely, inner half of constricted lip is not readily
+                visible, curving up either side of the column; anther sparkling-white, ovary twisted; outer
+                segment of lip is broad, heart-shaped but blunt, bears a yellow centre with several low,
+                papillose crests.
+                To the touch, the plant feels clammy, wax-like.
+            </p>
+            <h4>Comments</h4>
+            <p>
+                The only totally saprophytic species. Capsule is as white as the flower. The plant reminds
+                one of the white Indian pipe (Monotropa uniflora).
+            </p>
+            <h4>References</h4>
+            <p>The Native Orchids of the United States and Canada excluding Florida<br></p>
+            <a href="https://en.wikipedia.org/wiki/Cephalanthera_austiniae">Wikipedia</a>
+        </li>
+        <li class="card newfoundland nova-scotia new-brunswick quebec ontario manitoba saskatchewan alberta british-columbia yukon northwest-territories"
+            id="Coeloglossum viride var. virescens">
+            <div class="card-img">
+                <img alt="Coeloglossum viride var. virescens" src="./resources/Coeloglossum viride var. virescens.jpg">
+            </div>
+            <div class="card-title">Coeloglossum viride var. virescens</div>
+            <h4>Locations</h4>
+            <ul>
+                <li class="location-chip newfoundland">Newfoundland</li>
+                <li class="location-chip nova-scotia">Nova Scotia</li>
+                <li class="location-chip new-brunswick">New Brunswick</li>
+                <li class="location-chip quebec">Quebec</li>
+                <li class="location-chip ontario">Ontario</li>
+                <li class="location-chip manitoba">Manitoba</li>
+                <li class="location-chip saskatchewan">Saskatchewan</li>
+                <li class="location-chip alberta">Alberta</li>
+                <li class="location-chip british-columbia">British Columbia</li>
+                <li class="location-chip yukon">Yukon</li>
+                <li class="location-chip northwest-territories">Northwest Territories</li>
+            </ul>
+            <p></p>
+            <h4>Other names:</h4>
+            <ul>
+                <li class="card-other-title">(L.) Hartman var. virescens (Muhl.) Luer [Habenaria viridis, H.
+                    bracteata]
+                </li>
+                <li class="card-other-title">Long Bracted Green Orchid, Frog Orchid</li>
+            </ul>
+            <h4>Specific Habitat</h4>
+            <p>
+                A circumboreal species, growing in Deciduous and further north Boreal Forest, in rich loam
+                over dolostone bedrock, even though it requires acid or subacid soil. Plants generally grow
+                in partial shade of forest clearings and edges or among widely spaced trees. The leaf
+                covered soil is generally well-drained and often rocky, with sparse ground cover in forests,
+                and a mixture of forest and old-field species in clearings and along trails.
+            </p>
+            <h4>Flowering Season</h4>
+            <p>Mid May through June, in the far north even to mid-August.</p>
+            <h4>Description</h4>
+            <p>
+                Height 10 - 40 cm.
+                Stem leafy, all leaves clasping the stem; upper leaves reduced in size.
+                Leaves 2 - 5, usually 4; 2 on non-flowering plants.
+                Spike 6 - 20 cm long, 5 - 35 flowers, dense or lax.
+                Lowermost flower bracts 3 - 5 times larger than flowers, upper bracts much reduced.
+                Flowers green, petals and sepals forming a hood over the pendant lip which is toothed,
+                sometimes tinged with rose or red-brown. Short, sac-like spur.
+            </p>
+            <h4>Comments</h4>
+            <p>
+                Grows alone or in small groups. Occurs infrequently and does not seem to survive for many
+                seasons. Widespread from the Carolinian Zone to the shore of James Bay and HudsonÕs Bay.
+            </p>
+            <h4>References</h4>
+            <p>
+                Orchids of Ontario<br>
+                The Canadian Field-Naturalist<br>
+                The Orchids of Bruce &amp; Grey<br>
+            </p>
+            <a href="https://en.wikipedia.org/wiki/Dactylorhiza_viridis">Wikipedia</a>
+        </li>
+        <li class="card newfoundland nova-scotia prince-edward-island new-brunswick quebec ontario manitoba saskatchewan alberta british-columbia"
+            id="Corallorhiza maculata">
+            <div class="card-img">
+                <img alt="Corallorhiza maculata" src="./resources/Corallorhiza maculata.jpg">
+            </div>
+            <div class="card-title">Corallorhiza maculata</div>
+            <h4>Locations</h4>
+            <ul class="float-left">
+                <li class="location-chip newfoundland">Newfoundland</li>
+                <li class="location-chip nova-scotia">Nova Scotia</li>
+                <li class="location-chip prince-edward-island">Prince Edward Island</li>
+                <li class="location-chip new-brunswick">New Brunswick</li>
+                <li class="location-chip quebec">Quebec</li>
+                <li class="location-chip ontario">Ontario</li>
+                <li class="location-chip manitoba">Manitoba</li>
+                <li class="location-chip saskatchewan">Saskatchewan</li>
+                <li class="location-chip alberta">Alberta</li>
+                <li class="location-chip british-columbia">British Columbia</li>
+            </ul>
+            <p></p>
+            <h4>Other names:</h4>
+            <ul>
+                <li class="card-other-title">(Rafinesque) Rafinesque</li>
+                <li class="card-other-title">Spotted Coralroot, Large Coralroot</li>
+            </ul>
+            <h4>Specific Habitat</h4>
+            <p>
+                A transcontinental species of the Montane, southern Boreal, Mixed and northern Deciduous
+                Forest regions. Inhabits dryish sites in rich woodlands. Deciduous tree communities are most
+                commonly Beech, Sugar Maple-Beech, and Sugar Maple-Red Oak. Eastern Hemlock is the most
+                commontype of coniferous forest, and a preferred site within deciduous forests. Some
+                colonies are observed on forested slopes at the edges of peatlands , swamps, and ponds.
+            </p>
+            <h4>Flowering Season</h4>
+            <p>Early June to early August.</p>
+            <h4>Description</h4>
+            <p>
+                Height 10-50 cm; stem smooth, leafless, madder-purple, brownish or yellowish with several
+                tubular sheaths on the lower part. Raceme loose, few to many flowered.
+                Flowers similar in colour to the upper part of the stem but a darker shade.
+                Lip white usually spotted magenta-crimson or madder, three-lobed with terminal lobe broadly
+                rounded and deflexed.
+                As all colours of the flowering spike are quite variable, a variety of forms have been
+                named:
+                1) forma flavida (Peck) Cockerell - With an orange-yellow stem and sheaths, lemon-yellow
+                flowers and an unspotted white lip.
+                2) forma intermedia Farwell - A predominantly brown plant with the stem and fruits light
+                greyish-brown and the sheaths dark purplish-brown.
+                3) forma punicea H. H. Bartlet - A plant without a trace of brown, but with the stem and
+                fruit lavender or purple and the sheaths much paler than the stem.
+                4) forma maculata with a pinkish-purple stem.
+                5) an unnamed purple form which flowers earlier than the other forms
+            </p>
+            <h4>Comments</h4>
+            <p>
+                Forma flavida is very rare and only known to exist from the central part of the Bruce
+                Peninsula northwards. The stalk of Corallorhiza maculata appears above ground level only
+                when flowering and producing seeds.
+            </p>
+            <h4>References</h4>
+            <p>
+                Guide to Orchids of North America The Canadian Field-Naturalist Vol III Ð 1<br>
+                The Orchids of Bruce &amp; Grey<br>
+            </p>
+            <a href="https://en.wikipedia.org/wiki/Corallorhiza_maculata">Wikipedia</a>
+        </li>
+        <li class="card british-columbia" id="Corallorhiza mertensiana">
+            <div class="card-img">
+                <img alt="Corallorhiza mertensiana" src="./resources/Corallorhiza mertensiana.jpg">
+            </div>
+            <div class="card-title">Corallorhiza mertensiana</div>
+            <h4>Locations</h4>
+            <ul>
+                <li class="location-chip british-columbia">British Columbia</li>
+            </ul>
+            <p></p>
+            <h4>Other names:</h4>
+            <ul>
+                <li class="card-other-title">Bongard</li>
+                <li class="card-other-title">Western Coralroot</li>
+            </ul>
+            <h4>Specific Habitat</h4>
+            <p>Moist to dry evergreen woods.</p>
+            <h4>Flowering Season</h4>
+            <p>Early June to early August.</p>
+            <h4>Description</h4>
+            <p>
+                Height to 50 cm; stem leafless, reddish to purplish.
+                Raceme loose with many flowers; petals in contact with dorsal sepal; lip purplish, margins
+                toothed, often lobed near the base, curved sharply downward from near the base.
+            </p>
+            <h4>Comments</h4>
+            <p>
+                Special features: a reddish-purple striped lip and a long upward-extending column.
+                Some authorities consider this orchid to be only a variety of Corallorhiza maculata, but on
+                the basis of plant structure studies it appears to be a separate species.
+                Along the shores of Buttle Lake on Vancouver Island, there are large colonies of both
+                species, intermingling in a number of places. There are several clumps of what appear to be
+                albinos; and a number of other, probably hybrid, plants.
+            </p>
+            <h4>References</h4>
+            <p>Guide to Orchids of North America<br></p>
+            <a href="https://en.wikipedia.org/wiki/Corallorhiza_mertensiana">Wikipedia</a>
+        </li>
+        <li class="card ontario" id="Corallorhiza odontorhiza">
+            <div class="card-img">
+                <img alt="Corallorhiza odontorhiza" src="./resources/Corallorhiza odontorhiza.jpg">
+            </div>
+            <div class="card-title">Corallorhiza odontorhiza</div>
+            <h4>Locations</h4>
+            <ul class="float-left">
+                <li class="location-chip ontario">Ontario</li>
+            </ul>
+            <p></p>
+            <h4>Other names:</h4>
+            <ul>
+                <li class="card-other-title">(Willd.) Nutt.</li>
+                <li class="card-other-title">Autumn Coralroot</li>
+            </ul>
+            <h4>Specific Habitat</h4>
+            <p>
+                Confined to the Carolinian zone and reliably reported only from the counties of Elgin, Kent,
+                Lambton, Lincoln (Regional Municipality of Niagara) and Norfolk. Usually associated with oak
+                and pine in sandy soil. Once locally common in 30-50 year old pine plantations near St.
+                Williams in Norfolk County (Landon, 1960).
+            </p>
+            <h4>Flowering Season</h4>
+            <p>September.</p>
+            <h4>Description</h4>
+            <p>
+                Height to 20 cm; leafless.
+                Raceme loose with a moderate number of flowers.
+                Flowers small and with little spreading, purplish, white lip spotted with magenta or purple
+                , curved, finely toothed along the margin.
+                A dull yellowish or greenish form with unspotted white lip (f. flavida `Wherry) has been
+                found in Kent and Lambton Counties (R. Brown pers. com.) And in Norfolk County (CAN,
+                TRT).
+            </p>
+            <h4>Comments</h4>
+            <p>
+                A small flower which scarcely opens. Sepals and petals in a claw-like form converge over the
+                lip. At flowering time, the ovaries are large and swollen and dominate the bloom. It is
+                probable that a mechanism of self-pollination is involved. Once locally common in 30 - 50
+                year old pine plantations near St Williams in Norfolk County : in 1951 a stand of several
+                thousand (Landon, 1960). The orchids have been all but wiped out by encroaching poison ivy
+                where tree thinning occurred.
+            </p>
+            <h4>References</h4>
+            <p>Orchids of Ontario<br></p>
+            <a href="https://en.wikipedia.org/wiki/Corallorhiza_odontorhiza">Wikipedia</a>
+        </li>
+        <li class="card quebec ontario manitoba saskatchewan alberta british-columbia" id="Corallorhiza striata"
+        >
+            <div class="card-img">
+                <img alt="Corallorhiza striata" src="./resources/Corallorhiza striata.jpg">
+            </div>
+            <div class="card-title">Corallorhiza striata</div>
+            <h4>Locations</h4>
+            <ul class="float-left">
+                <li class="location-chip quebec">Quebec</li>
+                <li class="location-chip ontario">Ontario</li>
+                <li class="location-chip manitoba">Manitoba</li>
+                <li class="location-chip saskatchewan">Saskatchewan</li>
+                <li class="location-chip alberta">Alberta</li>
+                <li class="location-chip british-columbia">British Columbia</li>
+            </ul>
+            <p></p>
+            <h4>Other names:</h4>
+            <ul>
+                <li class="card-other-title">Lindley</li>
+            </ul>
+            <h4>Specific Habitat</h4>
+            <p>
+                Dry to moist clear floors in coniferous and deciduous forests and in a variety of other
+                situations. Absent from the Carolinian Zone but widespread and rather local elsewhere in
+                Ontario to 50 L. Perhaps most frequent on the Bruce Peninsula and on Manitoulin Island,
+                where it is found in dry cedar woodlands where limestone is near the surface. In the Ottawa
+                area it grows in partial sun among widely-spaced clumps of Eastern White Cedar on the
+                limestone plains of the southwest and under the deeper shade of Balsam Fir and Eastern
+                Hemlock on the Canadian Shield to the north. It is also found in dappled to deep shade in
+                mixed forests of Eastern White Pine, Balsam Fir, Sugar Maple, Beech, and Eastern White
+                Cedar. Under a covering of leaf and/or needle humus, the substrate is usually sand,
+                occasionally clay. A few colonies have been encountered growing among the mosses or in the
+                wet organic soil of Eastern White Cedar-Balsam Fir swamps.
+            </p>
+            <h4>Flowering Season</h4>
+            <p>Mid-June to early July. This is the first of the Corallorhiza to bloom.</p>
+            <h4>Description</h4>
+            <p>
+                Height to 45 cm; stem erect, stout, succulent and leafless, madder-purple to brownish-purple
+                with 3-4 slightly inflated sheaths at the base paler than the stem.
+                Raceme a loose group of drooping flowers.
+                Flowers pinkish-yellow or white, tinged and conspicuously striped with reddish purple, large
+                for genus; petals form a loose hood with the dorsal sepal; lip tongue-shaped, pendant,
+                somewhat reflexed, fleshy, not lobed, 3 stripes at base merging at apex. Bilobed callus near
+                middle of base.
+            </p>
+            <h4>Comments</h4>
+            <p>
+                One of our most striking plants. The distinctive red striping of the flower provides
+                immediate identification. The flowers are dime-sized and have translucent sparkle. It is
+                primarily a western species, where a common companion plant is Corallorhiza maculata.
+            </p>
+            <h4>References</h4>
+            <p>
+                Orchids of Ontario<br>
+                The Canadian Field-Naturalist Vol III - 1<br>
+                The Orchids of Bruce &amp; Grey<br>
+            </p>
+            <a href="https://en.wikipedia.org/wiki/Corallorhiza_striata">Wikipedia</a>
+        </li>
+        <li class="card newfoundland nova-scotia prince-edward-island new-brunswick quebec ontario manitoba saskatchewan alberta british-columbia yukon northwest-territories"
+            id="Corallorhiza trifida">
+            <div class="card-img">
+                <img alt="Corallorhiza trifida" src="./resources/Corallorhiza trifida.jpg">
+            </div>
+            <div class="card-title">Corallorhiza trifida</div>
+            <h4>Locations</h4>
+            <ul class="float-left">
+                <li class="location-chip newfoundland">Newfoundland</li>
+                <li class="location-chip nova-scotia">Nova Scotia</li>
+                <li class="location-chip prince-edward-island">Prince Edward Island</li>
+                <li class="location-chip new-brunswick">New Brunswick</li>
+                <li class="location-chip quebec">Quebec</li>
+                <li class="location-chip ontario">Ontario</li>
+                <li class="location-chip manitoba">Manitoba</li>
+                <li class="location-chip saskatchewan">Saskatchewan</li>
+                <li class="location-chip alberta">Alberta</li>
+                <li class="location-chip british-columbia">British Columbia</li>
+                <li class="location-chip yukon">Yukon</li>
+                <li class="location-chip northwest-territories">Northwest Territories</li>
+            </ul>
+            <p></p>
+            <h4>Other names:</h4>
+            <ul>
+                <li class="card-other-title">Chatelain</li>
+                <li class="card-other-title">Early Coralroot, Northern Coralroot</li>
+            </ul>
+            <h4>Specific Habitat</h4>
+            <p>
+                A transcontinental species of the Boreal and Mixed Forest Regions and adjacent regions of
+                the
+                Montane and Deciduous Forests and Tundra. Occurring in moist woods, swamps, bogs, along
+                wooded streams and in wet meadows, responding well to "cold bottom" conditions. Is frequent
+                in swamps dominated by Eastern White Cedar, accompanied by Black Spruce, White Spruce,
+                Tamarack, Black Ash and Yellow Birch. Prefers moist habitats in the south, but is frequent
+                in drier upland situations northward. Dense, dryish Eastern White Cedar thickets sometimes
+                shelter this orchid. Here the substrates are usually sands and sandy loams.
+            </p>
+            <h4>Flowering Season</h4>
+            <p>Mid-May to early June in the south to July in the north.</p>
+            <h4>Description</h4>
+            <p>
+                Height to 20 cm; stem smooth, leafless, green or greenish-yellow with pale tubular sheaths
+                at
+                base.
+                Raceme a loose group of 3-20 flowers.
+                Flowers small, mostly pale greenish-yellow, sometimes tinged with red-brown; petals in
+                contact with dorsal sepal to form a hood; lip arcuate-recurved, 3-lobed , lateral lobes like
+                small triangular upturned teeth near the narrowed base; lip white, in the typical variety:
+                column, upper and lower surfaces of lip with deep magenta or ruby spots.
+                In var. verna, the whole plant except the lip is lacking the red and brown colouration; the
+                lip is white without spots; odour is faint and acrid, or richly floral, or lacking. Verna is
+                the variant generally found in mesic forest habitats
+            </p>
+            <h4>Comments</h4>
+            <p>
+                Plant is widespread, abundant and easily located in a variety of wooded situations. Tends to
+                form large clumps and extensive colonies. It is the only member of this genus with
+                distinctively yellowish-green colouring in the stem and flowers. Later in the season, the
+                orchid remains recognizable because it develops fat yellowish drooping seed pods.
+            </p>
+            <h4>References</h4>
+            <p>
+                Orchids of Ontario<br>
+                The Canadian Field-Naturalist Vol III - 1<br>
+                The Orchids of Bruce &amp; Grey<br>
+            </p>
+            <a href="https://en.wikipedia.org/wiki/Corallorhiza_trifida">Wikipedia</a>
+        </li>
+        <li class="card newfoundland nova-scotia prince-edward-island new-brunswick quebec ontario manitoba saskatchewan alberta northwest-territories"
+            id="Cypripedium acaule">
+            <div class="card-img">
+                <img alt="Cypripedium acaule" src="./resources/Cypripedium acaule.jpg">
+            </div>
+            <div class="card-title">Cypripedium acaule</div>
+            <h4>Locations</h4>
+            <ul class="float-left">
+                <li class="location-chip newfoundland">Newfoundland</li>
+                <li class="location-chip nova-scotia">Nova Scotia</li>
+                <li class="location-chip prince-edward-island">Prince Edward Island</li>
+                <li class="location-chip new-brunswick">New Brunswick</li>
+                <li class="location-chip quebec">Quebec</li>
+                <li class="location-chip ontario">Ontario</li>
+                <li class="location-chip manitoba">Manitoba</li>
+                <li class="location-chip saskatchewan">Saskatchewan</li>
+                <li class="location-chip alberta">Alberta</li>
+                <li class="location-chip northwest-territories">Northwest Territories</li>
+            </ul>
+            <p></p>
+            <h4>Other names:</h4>
+            <ul>
+                <li class="card-other-title">Aiton</li>
+                <li class="card-other-title">Pink Lady's-slipper, Stemless Lady's-slipper</li>
+            </ul>
+            <h4>Specific Habitat</h4>
+            <p>
+                Found in a variety of shaded, acidic habitats, both wet and dry, in boreal and temperate
+                regions. For example, in the Bruce Peninsula area, it grows mostly in acid conifer-dominated
+                swamps or wooded bogs. It can also be found growing in dry sandy or rocky places if the soil
+                requirements are right, particularly under Jack Pines in the northern part of the Bruce
+                Peninsula. Also located in White Pine stands along Lake Erie.
+            </p>
+            <h4>Flowering Season</h4>
+            <p>Mid to end of May until early July.</p>
+            <h4>Description</h4>
+            <p>
+                Height 10 - 59cm. Short, underground stem from which two or, rarely, three dark green,
+                strongly veined basal leaves rise, sheathing the scape.
+                Leaves and 12-40 cm scape are hairy. One lanceolate, green bract arches over solitary
+                flower.
+                Flower: sepals and lateral petals yellow-green to purplish-brown with lateral petals
+                spreading, somewhat twisted. Lip forming a pouch, showy pink (rarely white) with red or
+                purplish veining. Lip opens to an elongate fissure on upper surface. Fragrance usually
+                pleasantly floral, varying in intensity from quite strong to none, sometimes with sharp
+                notes.
+            </p>
+            <h4>Comments</h4>
+            <p>
+                Requires very definite environmental conditions, rarely surviving transplanting to gardens.
+                Root system extends approximately a meter in opposite directions from the plant, and cannot
+                withstand severance in order to transplant.
+                Germination from seed to flowering plant requires 10-16 years. In the Great Lakes Region,
+                late hard frosts will cut down most scapes, but affect the leaves themselves very little;
+                consequently, few plants bloom in such a year. Following a frost-free blooming season,
+                hundreds of seed pods ripen in the larger colonies.
+                Pollinated by bumble bee (Bombus) queens (Stoutamire, 1967, 1969).
+            </p>
+            <h4>References</h4>
+            <p>
+                Orchids of Ontario<br>
+                Orchids of the Western Great Lakes Region<br>
+                The Canadian Field-Naturalist Vol. III - 1<br>
+                The Orchids of Bruce &amp; Grey<br>
+            </p>
+            <a href="https://en.wikipedia.org/wiki/Cypripedium_acaule">Wikipedia</a>
+        </li>
+        <li class="card nova-scotia quebec ontario manitoba saskatchewan -in-ontario,-mainly-a-great-lakes---st.-lawrence-orchid-of-the-mixed-forest-region."
+            id="Cypripedium arietinum">
+            <div class="card-img">
+                <img alt="Cypripedium arietinum" src="./resources/Cypripedium arietinum.jpg">
+            </div>
+            <div class="card-title">Cypripedium arietinum</div>
+            <h4>Locations</h4>
+            <ul class="float-left">
+                <li class="location-chip nova-scotia">Nova Scotia</li>
+                <li class="location-chip quebec">Quebec</li>
+                <li class="location-chip ontario">Ontario</li>
+                <li class="location-chip manitoba">Manitoba</li>
+                <li class="location-chip saskatchewan">Saskatchewan</li>
+            </ul>
+            <p>In Ontario, mainly a Great Lakes - St. Lawrence orchid of the Mixed Forest Region.</p>
+            <h4>Other names:</h4>
+            <ul>
+                <li class="card-other-title">R. Brown</li>
+                <li class="card-other-title">Ram's Head Lady's Slipper</li>
+            </ul>
+            <h4>Specific Habitat</h4>
+            <p>
+                Two different types of habitat: one dry to moist, the other moist to wet. The first is
+                provided by maturing coniferous forests in areas of thin soil or sand dunes over flat-lying
+                calcareous rocks. Plants grow in dappled to partial shade of openings in the forest canopy.
+                Moist to wet conditions of coniferous fens and edges of cedar swamps sometimes drown plants
+                in rising water levels.
+            </p>
+            <h4>Flowering Season</h4>
+            <p>Last 10 days of May to mid. June.</p>
+            <h4>Description</h4>
+            <p>
+                Height 10-50 cm. Stem slender and hairy.
+                Leaves 3-4, deep green, elliptical, strongly ribbed, arranged in a rough spiral about the
+                stem.
+                Flowers solitary, scape to 15 cm. Petals and sepals greenish-brown, linear. Lip is white
+                crisscrossed with dark red veins, sometimes veins are faint. Lip is prolonged downward into
+                a small conical pouch. Mouth of lip covered with white hairs . Opening circular.
+            </p>
+            <h4>Comments</h4>
+            <p>
+                Blooms a little ahead of other Cypripediums in areas where it occurs. Most common on Bruce
+                Peninsula and Manitoulin Island in Ontario. Some locations in the Bruce Peninsula and Ottawa
+                District are known to have provided stable habitats for this genus for many decades. Plants
+                develop rapidly after appearing above ground, and blossom is rather short-lived. Pollination
+                of a bloom creates a hormone reaction within an hour, causing the upper sepal to drop down
+                and seal the lip. Requires cool soil conditions.
+            </p>
+            <h4>References</h4>
+            <p>
+                Orchids of Ontario<br>
+                Orchids of the Western Grest Lakes<br>
+                The Canadian Field-Naturalist Vol. III - 1<br>
+                The Orchids of Bruce &amp; Grey<br>
+            </p>
+            <a href="https://en.wikipedia.org/wiki/Cypripedium_arietinum">Wikipedia</a>
+        </li>
+        <li class="card ontario manitoba saskatchewan" id="Cypripedium candidum">
+            <div class="card-img">
+                <img alt="Cypripedium candidum" src="./resources/Cypripedium candidum.jpg">
+            </div>
+            <div class="card-title">Cypripedium candidum</div>
+            <h4>Locations</h4>
+            <ul class="float-left">
+                <li class="location-chip ontario">Ontario</li>
+                <li class="location-chip manitoba">Manitoba</li>
+                <li class="location-chip saskatchewan">Saskatchewan</li>
+            </ul>
+            <p></p>
+            <h4>Other names:</h4>
+            <ul>
+                <li class="card-other-title">Muhlenberg ex Willdenow</li>
+                <li class="card-other-title">Small White Lady's-slipper</li>
+            </ul>
+            <h4>Specific Habitat</h4>
+            <p>
+                Marly soil of fens. Shade intolerant. Decreasing due to invasion of their open habitat by
+                woody shrubs. In southern Ontario, now only located on the delta islands of Lake St. Clair
+                in open wet prairies, and at Stoco Fen in Hastings County, located in marshy openings.
+                Now extinct from near Bothwell in Kent County (Saunders, 1926), near Crystal Beach in
+                Welland County (J. A. Simon and G. J. Yaki, pers. Comm,), near Port Elgin in Bruce County
+                (CAN) and at Turkey Point in Norfolk County (Brownell, 1984a).
+            </p>
+            <h4>Flowering Season</h4>
+            <p>Late May to early June</p>
+            <h4>Description</h4>
+            <p>
+                Height to 25cm.
+                Leaves 3 -4, elliptic to lanceolate.
+                Dorsal sepal and lateral petals greenish, often red-striped, lanceolate. Petals slightly
+                longer and twisted. Lip white with violet veins within but no colour on the exterior,
+                sometimes purple-spotted about the orifice. Yellow staminode with purple spots.
+            </p>
+            <h4>Comments</h4>
+            <p>
+                Undoubtably the rarest of the ladyÕs-slippers in Ontario. It has declined throughout most of
+                its range, becoming rare as a result of drainage of wetlands and conversion of prairies to
+                agricultural land.
+                It has been found that annual mowing effectively increased a population of Cypripedium
+                candidum (Curtis, 1946), illustrating how simple management can help maintain a rare
+                species.
+            </p>
+            <h4>References</h4>
+            <p>
+                Orchids of Ontario<br>
+                The Canadian Field-Naturalist, Vol III - 1<br>
+                The Orchids of Bruce &amp; Grey<br>
+            </p>
+            <a href="https://en.wikipedia.org/wiki/Cypripedium_candidum">Wikipedia</a>
+        </li>
+    </ul>
+</div>
+</body>
+</html>
