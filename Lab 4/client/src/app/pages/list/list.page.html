@@ -1,0 +1,36 @@
+<div id="map"></div>
+<div *ngIf="isCurrentUser" class="main">
+    <label for="list-name"><h1>List Name:</h1></label>
+    <input type="text" id="list-name" value="{{list?.name}}" (input)="validateName()">
+    <h3>By: {{ list?.user?.nickname }}</h3>
+    <label for="list-description">Description:</label>
+    <textarea id="list-description">{{ list?.description }}</textarea>
+    <label for="list-private">Private:</label>
+    <input type="checkbox" id="list-private" [checked]="list?.is_private">
+    <button id="updateBtn" (click)="updateList()">Update List</button>
+</div>
+<div *ngIf="!isCurrentUser" class="main">
+    <h1>{{ list?.name }}</h1>
+    <h3>By: {{ list?.user?.nickname }}</h3>
+    <p>{{ list?.description }}</p>
+</div>
+<h2>Destinations ({{ list?.destinations?.length }})</h2>
+<ul id="destinations">
+    <li class="destination" *ngFor="let destination of list?.destinations">
+        <app-component-destination [destination]="destination"></app-component-destination>
+    </li>
+</ul>
+<h2>Reviews ({{ list?.reviews?.length }})</h2>
+<ul id="reviews">
+    <li id="new-review" *ngIf="user && !userHasReviewed">
+        <div id="rating-wrapper">
+            <input id="rating" type="range" min="0" max="10" value="10" (input)="setRating()">
+            <p id="rating-text">5 / 5</p>
+        </div>
+        <textarea id="comment"></textarea>
+        <button (click)="addReview()">Add Review</button>
+    </li>
+    <li class="review" *ngFor="let review of list?.reviews">
+        <app-list-review [review]="review"></app-list-review>
+    </li>
+</ul>

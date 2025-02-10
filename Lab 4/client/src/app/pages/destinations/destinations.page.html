@@ -1,0 +1,39 @@
+<div id="file-upload" *ngIf="this.isAdmin">
+    <label for="file">Replace Destinations: </label>
+    <input type="file" id="file" accept=".csv" (change)="readFile()">
+</div>
+<div id="search-options">
+    <button disabled id="show-all" (click)="showAllDestinations()">Show All Destinations</button>
+    <label for="search">Search: </label>
+    <input type="text" name="search" id="search" (input)="resetResults()">
+    <label for="limit">Limit Results: </label>
+    <select name="limit" id="limit" (change)="resetResults()">
+        <option>All</option>
+        <option>5</option>
+        <option>10</option>
+        <option>20</option>
+        <option>50</option>
+    </select>
+    <label for="sort">Sort By: </label>
+    <select name="sort" id="sort" (change)="search()">
+        <option value="tourists_asc">Annual Tourists (Ascending)</option>
+        <option value="tourists_desc" selected>Annual Tourists (Descending)</option>
+        <option value="name_asc">Name (A to Z)</option>
+        <option value="name_desc">Name (Z to A)</option>
+        <option value="region_asc">Region (A to Z)</option>
+        <option value="region_desc">Region (Z to A)</option>
+        <option value="country_asc">Country (A to Z)</option>
+        <option value="country_desc">Country (Z to A)</option>
+    </select>
+    <button id="prev" (click)="prevResults()" disabled><</button>
+    <button id="next" (click)="nextResults()" disabled>></button>
+    <div id="results"></div>
+</div>
+<div class="grid-2">
+    <div id="map"></div>
+    <ul id="destinations">
+        <li *ngFor="let destination of destinations">
+            <app-component-destination [destination]="destination"></app-component-destination>
+        </li>
+    </ul>
+</div>

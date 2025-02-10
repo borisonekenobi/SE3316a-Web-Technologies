@@ -1,0 +1,10 @@
+<div id="start">
+    <h1>Welcome to Destination Picker!</h1>
+    <p>Here you can find the best destinations for your next trip.</p>
+    <p>Click on "<a href="/destinations">Destinations</a>" to see the list of destinations.</p>
+</div>
+<div>
+    <ul>
+        <li *ngFor="let list of lists"><app-list [list]="list"></app-list></li>
+    </ul>
+</div>

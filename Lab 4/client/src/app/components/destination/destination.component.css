@@ -1,0 +1,34 @@
+div#wrapper {
+  margin: 20px 10px 0 10px;
+}
+
+div#main {
+  color: #333;
+  text-decoration: none;
+  display: block;
+  background: #f4f4f4;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+div#main:hover {
+  background: #e4e4e4;
+}
+
+.info {
+  background: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 5px;
+}
+
+.info-element {
+  margin: 5px 10px;
+}
+
+.hidden {
+  display: none;
+}

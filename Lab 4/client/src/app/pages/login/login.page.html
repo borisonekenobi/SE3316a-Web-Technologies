@@ -1,0 +1,10 @@
+<div>
+    <h1 id="title">Login</h1>
+    <input id="email" type="text" placeholder="email" (input)="validateEmail()">
+    <input id="nickname" *ngIf="!isLogin" type="text" placeholder="nickname" [required]="!isLogin"
+           (input)="validateNickname()">
+    <input id="password" type="password" placeholder="password" (input)="validatePassword()">
+    <button id="button" (click)="execute()">Login</button>
+    <p id="error">{{ error }}</p>
+    <a id="switch-text" (click)="switchType()">Don't have an account?</a>
+</div>

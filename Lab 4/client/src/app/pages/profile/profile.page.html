@@ -1,0 +1,61 @@
+<div class="flex">
+    <div class="side-bar">
+        <ul>
+            <button (click)="section = 'personal-info'">Personal Info</button>
+            <button *ngIf="isCurrentUser" (click)="section = 'security'">Security</button>
+            <button (click)="section = 'lists'">Lists</button>
+        </ul>
+    </div>
+    <div class="main" *ngIf="isCurrentUser && section === 'personal-info'">
+        <img ngSrc="{{user?.type === 'admin' ? 'admin-dark.png' : 'user-dark.png'}}" alt="icon" width="100" height="100">
+        <h2>Personal Information</h2>
+        <p>Email:</p><input id="email" type="text" value="{{ user?.email }}" (input)="validateEmail()">
+        <p>Nickname:</p><input id="nickname" type="text" value="{{ user?.nickname }}" (input)="validateNickname()">
+        <button (click)="savePersonalInfo()">Save</button>
+    </div>
+    <div class="main" *ngIf="!isCurrentUser && section === 'personal-info'">
+        <img ngSrc="{{user?.type === 'admin' ? 'admin-dark.png' : 'user-dark.png'}}" alt="icon" width="100" height="100">
+        <h2>Personal Information</h2>
+        <p>Nickname: {{ user?.nickname }}</p>
+        <div *ngIf="currentUser?.type === 'admin'">
+            <p>Disabled:</p><input id="is_disabled" type="checkbox">
+        </div>
+        <div *ngIf="currentUser?.type === 'admin'">
+            <p>Admin:</p><input id="is_admin" type="checkbox">
+        </div>
+        <button *ngIf="currentUser?.type === 'admin'" (click)="saveAdminInfo()">Save</button>
+    </div>
+    <div class="main" *ngIf="isCurrentUser && section === 'security'">
+        <img ngSrc="{{user?.type === 'admin' ? 'admin-dark.png' : 'user-dark.png'}}" alt="icon" width="100" height="100">
+        <h2>Security</h2>
+        <p>Password:</p><input id="password" type="password" (input)="validatePassword()">
+        <p>New Password:</p><input id="new-password" type="password" (input)="validateNewPassword()">
+        <p>Confirm Password:</p><input id="confirm-password" type="password" (input)="validateNewPassword()">
+        <button (click)="changePassword()">Save</button>
+    </div>
+    <div class="main" *ngIf="section === 'lists'">
+        <img ngSrc="{{user?.type === 'admin' ? 'admin-dark.png' : 'user-dark.png'}}" alt="icon" width="100" height="100">
+        <h2>Lists</h2>
+        <button (click)="addList = !addList" *ngIf="isCurrentUser" [disabled]="lists.length >= 20">Add List</button>
+        <ul>
+            <li *ngIf="addList">
+                <div class="wrapper">
+                    <div class="new-list">
+                        <label for="list-name">List Name:</label>
+                        <input id="list-name" type="text">
+                        <label for="list-description">Description:</label>
+                        <input id="list-description" type="text">
+                        <label for="list-private">Private:</label>
+                        <input id="list-private" type="checkbox" checked>
+                    </div>
+                    <button (click)="saveList()">Save</button>
+                    <p class="error">{{message}}</p>
+                </div>
+            </li>
+            <li *ngFor="let list of lists">
+                <app-list [list]="list"></app-list>
+            </li>
+        </ul>
+    </div>
+    <div></div>
+</div>

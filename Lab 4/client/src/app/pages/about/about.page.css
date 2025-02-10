@@ -1,0 +1,31 @@
+.wrapper {
+  background: #f9f9f9;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.hidden {
+  display: none;
+}
+
+div {
+  margin: 20px;
+}
+
+h2 {
+  margin-top: 20px;
+}
+
+h3 {
+  margin-top: 10px;
+}
+
+ol {
+  margin-left: 20px;
+}
+
+ul {
+  margin-left: 20px;
+  list-style-type: disc;
+}

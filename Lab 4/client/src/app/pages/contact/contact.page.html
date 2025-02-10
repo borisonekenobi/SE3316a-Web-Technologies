@@ -1,0 +1,16 @@
+<div>
+    <h1 id="title">Contact Us</h1>
+    <input id="email" type="text" placeholder="Email" (input)="validateEmail()">
+    <select name="subject" id="subject" (change)="validateSubject()">
+        <option>Recovering a disabled account</option>
+        <option>Delete all account data</option>
+        <option>File a DMCA notice (copyright infringement notification)</option>
+        <option>File a counter-notice</option>
+        <option>Privacy and security policy question</option>
+        <option>DMCA notice & takedown policy question</option>
+        <option>Acceptance use policy question</option>
+    </select>
+    <textarea id="message" placeholder="Message" (input)="validateMessage()"></textarea>
+    <p id="char-counter">0 / 2500</p>
+    <button id="button" (click)="submit()">Submit</button>
+</div>

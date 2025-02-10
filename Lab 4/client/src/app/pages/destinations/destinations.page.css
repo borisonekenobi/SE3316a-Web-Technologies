@@ -1,0 +1,32 @@
+div#file-upload {
+  width: fit-content;
+}
+
+div.grid-2 {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+div#search-options {
+  margin: 0 0 0 auto;
+  width: fit-content;
+}
+
+div#map {
+  min-width: 500px;
+  width: 100%;
+  height: calc(100dvh - 60px);
+}
+
+p {
+  margin: 5px 0;
+}
+
+label {
+  margin-left: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}

@@ -1,0 +1,11 @@
+<div>
+    <h3>{{ review.user.nickname }}</h3>
+    <img *ngFor="let _ of [].constructor(getFullStars())" ngSrc="star.png" alt="star" height="20"
+         width="20">
+    <img *ngFor="let _ of [].constructor(getHalfStars())" ngSrc="half-star.png" alt="half star"
+         height="20" width="20">
+    <img *ngFor="let _ of [].constructor(getEmptyStars())" ngSrc="no-star.png" alt="no star"
+         height="20" width="20">
+    <p>{{ review.comment }}</p>
+    <button *ngIf="isAdmin" (click)="changeReview()">{{review.is_hidden ? 'Show Review' : 'Hide Review'}}</button>
+</div>

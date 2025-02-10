@@ -1,0 +1,36 @@
+<div id="map"></div>
+<div id="info">
+    <h1>{{ destination?.destination }}</h1>
+    <h3>{{ destination?.region }}, {{ destination?.country }}</h3>
+    <p>{{ destination?.category }}</p>
+    <p>{{ destination?.annual_tourists }} annual tourists</p>
+    <p>{{ destination?.currency }}</p>
+    <p>{{ destination?.religion }}</p>
+    <p>{{ destination?.foods }}</p>
+    <p>{{ destination?.language }}</p>
+    <p>{{ destination?.best_time_visit }}</p>
+    <p>{{ destination?.cost_of_living }}</p>
+    <p>{{ destination?.safety }}</p>
+    <p>{{ destination?.cultural_significance }}</p>
+    <p>{{ destination?.description }}</p>
+    <div *ngIf="user && lists.length > 0">
+        <select id="list">
+            <option *ngFor="let list of lists" value="{{list.id}}">{{list.name}}</option>
+        </select>
+        <button (click)="addToList()">Add to list</button>
+    </div>
+</div>
+<h2>Reviews ({{ destination?.reviews?.length }})</h2>
+<ul id="reviews">
+    <li id="new-review" *ngIf="user && !userHasReviewed">
+        <div id="rating-wrapper">
+            <input id="rating" type="range" min="0" max="10" value="10" (input)="setRating()">
+            <p id="rating-text">5 / 5</p>
+        </div>
+        <textarea id="comment"></textarea>
+        <button (click)="addReview()">Add Review</button>
+    </li>
+    <li class="review" *ngFor="let review of destination?.reviews">
+        <app-destination-review [review]="review"></app-destination-review>
+    </li>
+</ul>

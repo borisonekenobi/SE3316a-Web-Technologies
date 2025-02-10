@@ -1,0 +1,42 @@
+nav {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.right {
+  background: #333;
+  float: right;
+}
+
+.right a {
+  margin-right: 0;
+}
+
+img {
+  margin-right: 5px;
+}
+
+span {
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+#profile-options {
+  background: #333;
+  padding: 10px;
+  margin-top: 10px;
+}

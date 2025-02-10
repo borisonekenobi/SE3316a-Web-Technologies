@@ -1,0 +1,22 @@
+<nav>
+    <a routerLink="/">
+        <img ngSrc="favicon.ico" alt="icon" width="15" height="15">
+        Destination Picker
+    </a>
+    <a routerLink="/destinations">Destinations</a>
+    <a routerLink="/lists">Public Lists</a>
+    <a routerLink="/about">About</a>
+    <a routerLink="/contact">Contact</a>
+    <div class="right"
+         (mouseenter)="document.getElementById('profile-options')?.classList?.remove('hidden')"
+         (mouseleave)="document.getElementById('profile-options')?.classList?.add('hidden')">
+        <a *ngIf="!user" routerLink="/login">Login</a>
+        <img *ngIf="user" ngSrc="{{user?.type === 'admin' ? 'admin.png' : 'user.png'}}" alt="{{user?.type}}" height="15" width="15">
+        <span *ngIf="user">{{ user.nickname }} ▾</span>
+        <ul id="profile-options" class="hidden" *ngIf="user">
+            <li><a *ngIf="user" routerLink="/profile">Profile</a></li>
+            <li><a *ngIf="user" routerLink="/logout">Logout</a></li>
+        </ul>
+    </div>
+</nav>
+<router-outlet></router-outlet>

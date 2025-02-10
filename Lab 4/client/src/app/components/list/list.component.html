@@ -1,0 +1,19 @@
+<div id="main" (click)="isOpen = !isOpen">
+    <h3>{{ isOpen ? '▾' : '▸' }} {{ list.name }} ({{ list.destinations.length }})</h3>
+    <h4>By: {{ list.user.nickname }}</h4>
+    <p *ngIf="list.average_rating">Average Rating: {{ parseFloat(list.average_rating) / 2 }} / 5</p>
+    <button *ngIf="!isCurrentUser" (click)="viewMore()">View More</button>
+    <div *ngIf="isCurrentUser">
+        <button *ngIf="isCurrentUser" (click)="editList()">Edit</button>
+        <button *ngIf="isCurrentUser" (click)="deleteList()">Delete</button>
+    </div>
+    <div class="info {{isOpen ? '' : 'hidden'}}">
+        <p>{{ list.description }}</p>
+        <ul>
+            <li *ngFor="let destination of list.destinations">
+                <app-component-destination [destination]="destination"></app-component-destination>
+                <button (click)="deleteDestination(destination)">Delete</button>
+            </li>
+        </ul>
+    </div>
+</div>

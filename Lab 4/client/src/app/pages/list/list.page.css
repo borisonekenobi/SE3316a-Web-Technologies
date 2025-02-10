@@ -1,0 +1,76 @@
+div#map {
+  height: 400px;
+  width: 100%;
+}
+
+div.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+label {
+  width: fit-content;
+}
+
+input {
+  font-size: 24px;
+  font-weight: bold;
+  width: 50%;
+  padding: 10px;
+  margin-bottom: 10px;
+  outline: none;
+}
+
+input.is-invalid {
+  border: 2px solid red;
+}
+
+input[type=checkbox] {
+  width: fit-content;
+}
+
+textarea {
+  width: 50%;
+  padding: 10px;
+  outline: none;
+}
+
+button#updateBtn {
+  width: fit-content;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.review {
+  margin-bottom: 20px;
+  margin-left: 20px;
+  border-left: 3px solid #e0e0e0;
+  padding-left: 10px;
+}
+
+#new-review {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+}
+
+#rating-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+input[type=range] {
+  width: 75%;
+  padding: 0;
+  margin: 0;
+}
+
+textarea {
+  width: 100%;
+}

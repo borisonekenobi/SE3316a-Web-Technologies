@@ -1,0 +1,38 @@
+div#map {
+  height: 400px;
+  width: 100%;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.review {
+  margin-bottom: 20px;
+  margin-left: 20px;
+  border-left: 3px solid #e0e0e0;
+  padding-left: 10px;
+}
+
+#new-review {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+}
+
+#rating-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+input[type=range] {
+  width: 75%;
+  padding: 0;
+  margin: 0;
+}
+
+textarea {
+  width: 100%;
+}
